@@ -13,7 +13,7 @@ La API está diseñada bajo una arquitectura RESTful y utiliza Entity Framework 
 - Generación automática de códigos únicos de economía (CodigoEconomia).
 - Registro y autenticación de usuarios mediante Email y PasswordHash.
 - Control de ingresos y egresos asociados a una organización.
-- Roles de organizadores (Owner / Admin / Viewer).
+- Roles de organizadores (Owner / Admin / View).
 - Cálculo total de movimientos económicos.
 - Eliminación en cascada de registros relacionados.
 - Arquitectura modular con separación por capas (Controllers, Entities, Dtos, Database).
@@ -54,7 +54,7 @@ Usuarios
 Organizadores
 - Id
 - FKId_Usuarios
-- Tipo (Owner/Admin/Viewer)
+- tipoUsuario (Owner/Admin/Viewer)
 - FKCodigoEconomia
 
 OrganizacionEconomica
@@ -143,7 +143,7 @@ Respuesta:
    dotnet run
 
 6. Acceder a Swagger:
-   https://localhost:5001/swagger
+   https://localhost:7148/swagger
 
 ------------------------------------------------------------
 🧭 Próximas mejoras
@@ -158,9 +158,9 @@ Respuesta:
 ------------------------------------------------------------
 🧑‍💻 Autor
 ------------------------------------------------------------
-Desarrollador: Doge MX
+Desarrollador: GieziAdael
 Rol: Backend Developer (.NET Junior)
-Contacto: (agregar correo o LinkedIn)
+Contacto: giezi.tlaxcoapan@gmail.com
 
 ------------------------------------------------------------
 🏁 Estado del proyecto
