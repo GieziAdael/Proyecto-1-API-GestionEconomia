@@ -1,0 +1,24 @@
+///////// CREAR USUARIO /////////////
+1) Obtiene email, normalizarlo, y verificar si ya existe
+2) Si no existe, obtiene el password y lo hashea, tambien crea un codigo de verificacion y lo hashea
+3) Crea el usuario en la base de datos
+
+////////// LOGIN USUARIO /////////////
+1) Obtiene email, normalizarlo, y verificar si existe; Obtiene el password
+2) Si existe, compara el password con el hasheado en la base de datos
+3) Si el password es correcto, obtiene el codigo de usuario y lo retorna
+
+////////// CREAR ORGANIZACION /////////////
+1) Verifica que la organizacion no exista
+2) Si no existe, crea la organizacion en la base de datos
+3) Obtiene el codigo de la organizacion y crea la relacion con el usuario como owner en la base de datos
+
+////////// LOGIN ORGANIZACION /////////////
+1) Verifica que la organizacion exista
+2) Si existe, verifica si son correctas las credenciales
+3) Verifica si el usuario forma parte de la organizacion, si es asi, obtiene el codigo de la organizacion y lo retorna
+
+////////// VER HISTORIAL ECONOMIA /////////////
+1) En base al codigo de la organizacion, obtiene el historial de economia
+
+////////// CREAR UN NUEVO INGRESO/EGRESO /////////////
