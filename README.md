@@ -21,6 +21,7 @@ La API está diseñada bajo una arquitectura RESTful y utiliza Entity Framework 
 ------------------------------------------------------------
 🧱 Estructura del proyecto
 ------------------------------------------------------------
+```
 📁 Proyecto1.API
  ┣ 📂 Controllers
  ┃ ┣ EndpointsEconomia.cs
@@ -41,7 +42,7 @@ La API está diseñada bajo una arquitectura RESTful y utiliza Entity Framework 
  ┃ ┣ DtoOrgEconm.cs
  ┃ ┗ DtoUser.cs
  ┗ Program.cs / Startup.cs
-
+```
 ------------------------------------------------------------
 🧩 Entidades principales
 ------------------------------------------------------------
