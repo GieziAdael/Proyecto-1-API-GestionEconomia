@@ -1,30 +1,27 @@
 # Etapa 1: Build
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
 WORKDIR /app
 
-# Copiar csproj y restaurar dependencias
-COPY *.csproj ./
+# Copiar únicamente el archivo .csproj
+COPY API_GestionEconomia.csproj ./
+
+# Restaurar dependencias
 RUN dotnet restore
 
-# Copiar todo el proyecto y compilar
+# Copiar el resto del código fuente (solo lo necesario)
 COPY . ./
-RUN dotnet publish -c Release -o out
+
+# Publicar la aplicacion
+RUN dotnet publish API_GestionEconomia.csproj -c Release -o out
 
 # Etapa 2: Runtime
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime-env
 WORKDIR /app
+COPY --from=build-env /app/out .
 
-# Copiar los archivos publicados desde la etapa de build
-COPY --from=build /app/out ./
+# Definir en qué puerto escuchará la app
+ENV ASPNETCORE_URLS=http://+:80
 
-# Variables de entorno para la cadena de conexión
-ENV DB_SERVER=""
-ENV DB_NAME=""
-ENV DB_USER=""
-ENV DB_PASS=""
-
-# Exponer puerto 80
 EXPOSE 80
 
-# Ejecutar la Web API
 ENTRYPOINT ["dotnet", "API_GestionEconomia.dll"]
