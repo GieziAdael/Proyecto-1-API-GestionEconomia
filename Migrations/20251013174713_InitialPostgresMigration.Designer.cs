@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace API_GestionEconomia.Migrations
 {
     [DbContext(typeof(MyAppDbContext))]
-    [Migration("20251013163614_TrPostgresMigration")]
-    partial class TrPostgresMigration
+    [Migration("20251013174713_InitialPostgresMigration")]
+    partial class InitialPostgresMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -36,7 +36,7 @@ namespace API_GestionEconomia.Migrations
                     b.Property<string>("DescripcionMovimiento")
                         .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("character varying(200)");
+                        .HasColumnType("varchar(200)");
 
                     b.Property<string>("FKCodigoEconomia")
                         .IsRequired()
@@ -76,7 +76,7 @@ namespace API_GestionEconomia.Migrations
                     b.Property<string>("NombreOrg")
                         .IsRequired()
                         .HasMaxLength(100)
-                        .HasColumnType("character varying(100)");
+                        .HasColumnType("varchar(100)");
 
                     b.Property<string>("PasswordOrg_Hash")
                         .IsRequired()
@@ -105,7 +105,7 @@ namespace API_GestionEconomia.Migrations
                     b.Property<string>("tipoUsuario")
                         .IsRequired()
                         .HasMaxLength(5)
-                        .HasColumnType("character varying(5)");
+                        .HasColumnType("varchar(5)");
 
                     b.HasKey("Id");
 
@@ -127,7 +127,7 @@ namespace API_GestionEconomia.Migrations
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasMaxLength(320)
-                        .HasColumnType("character varying(320)");
+                        .HasColumnType("varchar(320)");
 
                     b.Property<string>("Password_Hash")
                         .IsRequired()
