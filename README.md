@@ -129,10 +129,10 @@ Respuesta:
 ⚙️ Instrucciones de instalación
 ------------------------------------------------------------
 1. Clonar el repositorio:
-   git clone https://github.com/tuusuario/Proyecto1-ApiGestionEconomia.git
+   git clone https://github.com/GieziAdael/Proyecto-1-API-GestionEconomia.git
 
 2. Acceder al directorio:
-   cd Proyecto1-ApiGestionEconomia
+   cd Proyecto-1-API-GestionEconomia
 
 3. Restaurar paquetes:
    dotnet restore
