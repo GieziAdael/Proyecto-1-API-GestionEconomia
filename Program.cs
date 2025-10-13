@@ -15,7 +15,8 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
                        ?? Environment.GetEnvironmentVariable("DEFAULT_CONNECTION");
 
 builder.Services.AddDbContext<MyAppDbContext>(options =>
-    options.UseSqlServer(connectionString));
+    options.UseNpgsql(connectionString));
+
 
 
 var app = builder.Build();
