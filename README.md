@@ -179,7 +179,12 @@ Contacto: giezi.tlaxcoapan@gmail.com
 ------------------------------------------------------------
 🏁 Estado del proyecto
 ------------------------------------------------------------
-✅ Desplegado en la nube (Render)  
+✅ Desplegado en la nube (Render)
+CONSUMELO: https://proyecto-1-api-gestioneconomia.onrender.com
+URL con SWAGGER: https://proyecto-1-api-gestioneconomia.onrender.com/swagger/index.html
+
+Nota: Agrega informacion no sensible (no real), ya que en este proyecto, no se implementan medidas de seguridad.
+
 🌐 Base de datos PostgreSQL configurada correctamente  
-🚧 En desarrollo activo con nuevas funcionalidades planeadas  
+🚧 En desarrollo activo con nuevas funcionalidades planeadas
 
