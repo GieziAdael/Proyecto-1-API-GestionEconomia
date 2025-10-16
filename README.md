@@ -34,6 +34,7 @@ Puedes usar Swagger para probar los endpoints en línea, sin necesidad de entorn
 ------------------------------------------------------------
 🧱 Estructura del proyecto
 ------------------------------------------------------------
+```
 📁 Proyecto1.API
  ┣ 📂 Controllers
  ┃ ┣ EndpointsEconomia.cs
@@ -54,7 +55,7 @@ Puedes usar Swagger para probar los endpoints en línea, sin necesidad de entorn
  ┃ ┣ DtoOrgEconm.cs
  ┃ ┗ DtoUser.cs
  ┗ Program.cs / Startup.cs
-
+```
 ------------------------------------------------------------
 🧩 Entidades principales
 ------------------------------------------------------------
